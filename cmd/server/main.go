@@ -11,7 +11,6 @@ import (
 
 func main() {
 	app.InitConfig()
-	app.GenerateDoc()
 	app.InitRedis()
 	srvclient.Init()
 	app.InitRouter()

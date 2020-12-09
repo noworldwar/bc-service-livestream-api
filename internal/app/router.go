@@ -6,6 +6,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/noworldwar/bc-service-livestream-api-go/internal/api"
 	"github.com/noworldwar/bc-service-livestream-api-go/internal/model"
 	"github.com/spf13/viper"
 )
@@ -13,8 +14,11 @@ import (
 func InitRouter() {
 	r := gin.New()
 	r.Use(cors.Default())
-	r.Use(Logger())
 	r.Use(gin.Recovery())
+
+	// @Api:ApiService@
+	r.POST("/api", api.ApiService)
+	// @end
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(400, gin.H{"error": "Bad Request"})
