@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/noworldwar/bc-service-livestream-api/internal/model"
+	"github.com/noworldwar/bc-service-livestream-api-go/internal/model"
 )
 
 func Cleanup() {

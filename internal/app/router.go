@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/noworldwar/bc-service-livestream-api/internal/model"
+	"github.com/noworldwar/bc-service-livestream-api-go/internal/model"
 	"github.com/spf13/viper"
 )
 

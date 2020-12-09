@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/heptiolabs/healthcheck"
-	"github.com/noworldwar/bc-service-livestream-api/internal/app"
-	"github.com/noworldwar/bc-service-livestream-api/internal/srvclient"
+	"github.com/noworldwar/bc-service-livestream-api-go/internal/app"
+	"github.com/noworldwar/bc-service-livestream-api-go/internal/srvclient"
 )
 
 func main() {

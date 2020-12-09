@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/go-redis/redis"
-	"github.com/noworldwar/bc-service-livestream-api/internal/model"
+	"github.com/noworldwar/bc-service-livestream-api-go/internal/model"
 	"github.com/spf13/viper"
 )
 
