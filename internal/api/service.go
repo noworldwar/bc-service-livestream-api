@@ -32,7 +32,7 @@ func ApiService(c *gin.Context) {
 	case "balance":
 		getBalance(c, data)
 	case "fund_transfer":
-		fundTransfer(data)
+		fundTransfer(c, data)
 	}
 }
 
@@ -47,6 +47,13 @@ func getBalance(c *gin.Context, data map[string]string) {
 	return
 }
 
-func fundTransfer(data map[string]string) {
+func fundTransfer(c *gin.Context, data map[string]string) {
+
+	if missing := utils.CheckMapData(data, "username", "tran_id", "amount", "currency_code"); missing != "" {
+		utils.ErrorResponse(c, 400, "Missing Required Parameter: "+missing, nil)
+		return
+	}
+
+	c.JSON(200, gin.H{"data": data})
 	return
 }
